@@ -10,7 +10,7 @@ from midi_to_tokens import midi_to_tokens
 tokens = midi_to_tokens('path/to/midi', steps_per_beat=12).tokens
 ```
 
-To tokenize 1 through 4 measures only,
+To tokenize measures 1 through 4 only,
 
 ```python
 tokens = midi_to_tokens('path/to/midi', steps_per_beat=12).measures(1, 4)

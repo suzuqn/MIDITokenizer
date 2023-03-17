@@ -18,7 +18,7 @@ class midi_to_tokens():
         if event in ('bar', 'beat'):
             return [event]
         elif isinstance(event, pretty_midi.containers.Note):
-            return [f'note_{event.pitch}', f'len_{self._time_to_step(event.end - event.start)}']
+            return [f'note_{event.pitch}', f'len_{self._time_to_step(event.end) - self._time_to_step(event.start)}']
         
     def _trim_note(self, note, start, end):
         n = copy.copy(note)
